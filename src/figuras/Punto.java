@@ -1,33 +1,38 @@
 package figuras;
 
+/**
+ * Punto del plano cartesiano; Circulo lo usa como centro (composicion).
+ */
 public class Punto {
 
-	private double x;
+    private double x;
 
-	private double y;
+    private double y;
 
-	public Punto(double x, double y) {
+    public Punto(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
 
-	}
+    public double getX() {
+        return x;
+    }
 
-	public double getX() {
-		return 0;
-	}
+    public void setX(double x) {
+        this.x = x;
+    }
 
-	public void setX(double x) {
+    public double getY() {
+        return y;
+    }
 
-	}
+    public void setY(double y) {
+        this.y = y;
+    }
 
-	public double getY() {
-		return 0;
-	}
-
-	public void setY(double y) {
-
-	}
-
-	public String toString() {
-		return null;
-	}
+    @Override
+    public String toString() {
+        return "(" + x + ", " + y + ")";
+    }
 
 }

@@ -2,28 +2,34 @@ package figuras;
 
 public class Rectangulo extends FiguraBase {
 
-	private double base;
+    private double base;
 
-	private double altura;
+    private double altura;
 
-	public Rectangulo(double base, double altura) {
+    public Rectangulo(double base, double altura) {
+        if (base <= 0 || altura <= 0) {
+            throw new IllegalArgumentException("La base y la altura deben ser mayores que 0");
+        }
+        this.base = base;
+        this.altura = altura;
+    }
 
-	}
+    public double getBase() {
+        return base;
+    }
 
-	public double getBase() {
-		return 0;
-	}
+    public double getAltura() {
+        return altura;
+    }
 
-	public double getAltura() {
-		return 0;
-	}
+    @Override
+    public double calcularArea() {
+        return base * altura;
+    }
 
-	public double calcularArea() {
-		return 0;
-	}
-
-	public void mostrarNombre() {
-
-	}
+    @Override
+    public void mostrarNombre() {
+        System.out.println("Rectangulo (Base: " + base + ", Altura: " + altura + ")");
+    }
 
 }

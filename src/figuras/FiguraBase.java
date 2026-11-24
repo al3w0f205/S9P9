@@ -1,23 +1,19 @@
 package figuras;
 
+/**
+ * Clase abstracta que implementa Figura. Deja calcularArea() y
+ * mostrarNombre() a cada subclase y reutiliza mostrarArea().
+ */
 public abstract class FiguraBase implements Figura {
 
-	protected FiguraBase() {
+    protected FiguraBase() {
+    }
 
-	}
+    public abstract void mostrarNombre();
 
-	public abstract void mostrarNombre();
-
-	public void mostrarArea() {
-
-	}
-
-
-	/**
-	 * @see figuras.Figura#calcularArea()
-	 */
-	public double calcularArea() {
-		return 0;
-	}
+    public void mostrarArea() {
+        mostrarNombre();
+        System.out.println("Area: " + String.format("%.2f", calcularArea()));
+    }
 
 }
