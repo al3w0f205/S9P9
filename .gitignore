@@ -1,0 +1,9 @@
+*.class
+out/
+.idea/workspace.xml
+.idea/shelf/
+*.asta.lock
+*.bak
+evidencias/
+modelo_uml/
+codigo_generado/
